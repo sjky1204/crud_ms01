@@ -1,0 +1,18 @@
+<h1>목 록</h1>
+<table class="table">
+    <thead>
+        <th>#</th>
+        <th>제 목</th>
+        <th>작성일자</th>
+    </thead>
+    <tbody>
+        <% @posts.each do |post| %>
+        <tr>
+            <th><%= post.id %></th>
+            <td><a href="/posts/show/<%= post.id %>" ><%= post.title %></a></td>
+            <td><%= post.created_at %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<a href="/posts/new"><button type="button" class="btn btn-lg btn-primary">새 글 작성</button></a>

@@ -1,0 +1,20 @@
+<h1><%= @post.id %>번 포스트</h1>
+
+<div class="form-group row">
+    <label for="example-text-input" class="col-form-label"><h3>제목</h3></label>
+    <div class="col-8">
+        <textarea class="form-control" id="exampleTextarea" rows="1"><%= @post.title %></textarea>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="exampleTextarea"><h3>내용</h3></label>
+    <div class="col-8">
+        <textarea class="form-control" id="exampleTextarea" rows="3"><%= @post.content %></textarea>
+    </div>
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+        <h3><a href="/" class="btn btn-lg btn-primary">목 록</a></h3>
+        <h3><a href="/posts/edit/<%= @post.id %>" class="btn btn-lg btn-primary">수 정</a></h3>
+        <h3><a href="/posts/destroy/<%= @post.id %>" data-confirm="진짜로 삭제하시겠어요?" class="btn btn-lg btn-primary">삭 제</a></h3>
+</div>

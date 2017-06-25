@@ -1,0 +1,17 @@
+<h1><%= @post.id %>번 post 수정</h1>
+<form action="/posts/update/<%= @post.id %>">
+
+    <div class="form-group row">
+        <label for="example-text-input" class="col-form-label"><h3>제목</h3></label>
+        <div class="col-8">
+            <input class="form-control" type="text" id="example-text-input" name="input_title" value="<%= @post.title %>">
+        </div>
+    </div>
+    <div class="form-group row">
+       <label for="exampleTextarea"><h3>내용</h3></label>
+        <div class="col-8">
+            <textarea class="form-control" id="exampleTextarea" rows="3" name="input_content"><%= @post.content %></textarea>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-lg btn-primary" value="저장">
+</form>
